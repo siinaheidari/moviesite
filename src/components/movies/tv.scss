@@ -1,0 +1,29 @@
+@import "movies";
+
+.tv-container {
+  @extend .movies-container;
+}
+
+.tv-title {
+  @extend .movies-title;
+
+}
+
+.tv {
+  @extend .movies;
+}
+
+.tv-list {
+  @extend .movies-list;
+
+  img {
+    max-width: 350px;
+    height: unset !important;
+  }
+
+  .img2 {
+    img {
+      height: 202px !important;
+    }
+  }
+}

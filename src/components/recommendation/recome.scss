@@ -1,0 +1,44 @@
+@import "../movies/movies.scss";
+
+.full-recome {
+  width: 100%;
+  background-color: black;
+  margin-top: -0.5rem;
+}
+
+.recome-container {
+  @extend .movies-container;
+img{
+  height: 290px!important;
+}
+  h2 {
+    padding: 0 !important;
+    color: white;
+    position: relative;
+    width: 17%;
+
+    &::after {
+      content: "";
+      background: #A71D31;
+      height: 2px;
+      width: 60%;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+    }
+  }
+}
+
+.recome {
+  @extend .movies;
+  align-items: center;
+
+}
+.no-recome{
+  padding: 1rem 0;
+}
+
+.recome-list {
+
+  @extend .movies-list;
+}

@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+
+.detail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  background-color: black;
+  z-index: 999;
+
+  .detail-list {
+    position: relative;
+    text-align: center;
+    align-items: center;
+
+    .baby-img {
+      display: none;
+    }
+
+    .back-img {
+      height: 850px;
+      background-position: center top;
+      background-size: cover;
+      top: 0;
+      opacity: 0.85;
+    }
+
+    .close-info {
+      display: none;
+    }
+
+    .info {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      background-color: rgba(0, 0, 0, 0.55);
+      color: white;
+      width: 90%;
+      max-width: 830px;
+      margin-left: 3.7rem;
+      bottom: 8%;
+      padding: 2rem 1rem;
+      max-height: 600px;
+      overflow-y: auto;
+
+
+      .skeleton-container {
+        width: 100%;
+      }
+
+      .skeleton-title {
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+        margin-bottom: 0.7rem;
+      }
+
+      .baby-info {
+        display: flex;
+        justify-content: center;
+
+        p {
+          margin: 0.3rem 0.5rem;
+          color: lightgray;
+        }
+      }
+
+      .skeleton-baby-info {
+        height: 20px;
+        width: 110px;
+      }
+
+      h1 {
+        font-size: 75px;
+        letter-spacing: 2px;
+
+      }
+
+      .desc {
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+        line-height: 2;
+
+        .skeleton-overview {
+          height: 20px;
+        }
+
+        .overview-p2 {
+          display: none;
+        }
+
+        h2 {
+          padding: 0.5rem;
+
+          &::after {
+            height: unset !important;
+          }
+        }
+
+        .read-or-hide {
+          align-items: center;
+          color: deepskyblue;
+        }
+
+      }
+
+      .progressbar {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        .baby-progress {
+          width: 100%;
+          max-width: 88px;
+          align-items: center;
+          text-align: center;
+          margin: 0 0.5rem;
+
+          .progress {
+            height: 80px;
+            font-weight: 600;
+          }
+
+          p {
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 0.5rem;
+          }
+
+          .baby-progress {
+            width: 90px;
+            align-items: center;
+            text-align: center;
+          }
+        }
+
+      }
+
+      .progressbar-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        div {
+          margin: 0 0.5rem;
+        }
+      }
+    }
+
+    .trailer-modal-open {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      width: 90%;
+      max-width: 830px;
+      margin-left: 3.7rem;
+      bottom: 10%;
+      padding: 1.3rem 0;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .no-trailer {
+      padding: 0.8rem;
+      align-items: center;
+      text-align: center;
+
+      img {
+        width: 100%;
+        max-width: 240px;
+      }
+    }
+
+    .trailer-container {
+      align-items: center;
+      text-align: right;
+
+      button {
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 10px;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 15px 40px;
+        border: none;
+        letter-spacing: 1px;
+        width: 100%;
+      }
+    }
+
+
+    .close-trailer {
+      display: none;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1.2rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 10px;
+        color: black;
+        cursor: pointer;
+        border-radius: 5px;
+        padding: 0.8rem 0.6rem;
+        border: none;
+        letter-spacing: 1px;
+        background-color: white;
+      }
+    }
+    .play{
+      background-color: #8B0000 !important;
+      color: white !important;
+    }
+  }
+  .skeleton-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+
+    .skeleton1 {
+      width: 190px;
+      height: 50px;
+      margin: 0.3rem 0.5rem;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+    .detail-list {
+      align-items: center !important;
+
+      .back-img {
+        display: none !important;
+      }
+
+      .baby-img {
+        display: flex !important;
+        background-image: linear-gradient(rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.9) 80%);
+        z-index: 1;
+
+        img {
+          width: 100% !important;
+          height: 100% !important;
+          min-height: 730px;
+          z-index: -1;
+        }
+      }
+
+      .trailer-modal-open {
+        overflow-y: hidden !important;
+        padding: 0.2rem 0 !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        bottom: -8px !important;
+        justify-content: flex-end;
+      }
+
+      .info {
+        width: 100% !important;
+        margin-left: 0 !important;
+        bottom: 0 !important;
+        padding: 1rem !important;
+
+        overflow-y: auto;
+        justify-content: start !important;
+        background-color: rgba(0, 0, 0, 0) !important;
+      }
+
+      h1 {
+        font-size: 45px !important;
+        margin-bottom: 0.5rem;
+        font-family: 'Concert One', cursive
+      }
+
+      .desc {
+        line-height: 1.4 !important;
+
+        h2 {
+          font-size: 19px !important;
+        }
+
+        .overview {
+          align-items: center;
+          text-align: center;
+          font-size: 15px;
+        }
+
+        .overview-p1 {
+          display: none;
+        }
+
+        .overview-p2 {
+          display: inline !important;
+          align-items: center;
+          text-align: center;
+          font-size: 14px !important;
+        }
+
+        .read-or-hide {
+          align-items: center;
+          color: deepskyblue;
+        }
+      }
+    }
+    .progress {
+      height: 76px !important;
+      font-weight: 600;
+    }
+    button {
+      padding: 0.5rem 0.7rem !important;
+    }
+  }
+
+  .skeleton1 {
+    width: 140px !important;
+  }
+}

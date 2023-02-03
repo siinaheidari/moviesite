@@ -1,0 +1,47 @@
+.loading-effect {
+  display: flex;
+}
+
+.Vertical-loading-effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+
+  div {
+    margin: 0.6rem 0;
+  }
+}
+
+.skeleton4 {
+  width: 350px;
+  height: 190px;
+  margin-right: 1rem;
+  margin-bottom: 13px;
+}
+
+.skeleton5 {
+  width: 200px;
+  height: 15px;
+  margin-bottom: 7px;
+}
+
+.skeleton6 {
+  width: 120px;
+  height: 15px;
+}
+
+@media (max-width: 600px) {
+  .skeleton4 {
+    margin-right: 0 !important;
+
+  }
+}
+
+@media (max-width: 372px) {
+  .skeleton4 {
+    margin-right: 0 !important;
+    width: 300px !important;
+  }
+}

@@ -1,0 +1,224 @@
+@import "../movies/movies.scss";
+
+.actor {
+  background-color: #0c0c0c;
+}
+
+.actorList {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 0.8rem;
+  width: 100%;
+  max-width: 1380px;
+  margin: auto;
+  font-weight: 600;
+}
+
+.actors-carusel {
+  width: 100%;
+  max-width: 490px;
+  margin-right: 1rem;
+
+  img {
+    width: 100%;
+    max-width: 490px;
+  }
+}
+
+.actor-overview {
+  width: 100%;
+  max-width: 700px;
+  padding: 0 1rem;
+
+}
+
+.actor-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 0.8rem 0;
+
+  p {
+    color: #ABABAB;
+    margin-top: 0.1rem;
+  }
+
+  .baby-progress {
+    width: 61px;
+    align-items: center;
+    text-align: center;
+
+    p {
+      color: #ABABAB;
+    }
+  }
+
+  h1 {
+    font-size: 50px;
+    letter-spacing: 1.5px;
+  }
+
+  .p1 {
+    color: #ABABAB;
+    font-size: 18px;
+  }
+}
+
+.biography {
+  line-height: 1.3;
+  text-align: start;
+  align-items: start;
+
+  h2 {
+    padding: 0 !important;
+    margin-bottom: 0.4rem;
+    color: white;
+
+    &::after {
+      height: 0 !important;
+    }
+  }
+
+  p {
+    font-weight: 600;
+    color: lightgray;
+  }
+
+  .read-or-hide {
+    color: deepskyblue;
+  }
+}
+
+.credit-container {
+  @extend .movies-container;
+  padding: 1rem 0 !important;
+  background-color: transparent;
+
+  h2 {
+    position: relative;
+    padding: 0 !important;
+
+    &::after {
+      content: "";
+      background: #8B0000;
+      height: 2px;
+      width: 20%;
+      position: absolute;
+      bottom: -5px !important;
+      left: 40%;
+    }
+  }
+
+
+  h2 {
+    margin-top: 0.5rem;
+
+    &::after {
+      left: 0;
+    }
+  }
+}
+
+.credit {
+  @extend .movies;
+  align-items: center;
+  background-color: transparent;
+  padding: 0 !important;
+
+}
+
+.credit-list {
+  @extend .movies-list;
+
+  .credit-title {
+    height: 50px;
+    overflow-y: auto;
+  }
+}
+
+
+.skeleton-1 {
+  height: 530px;
+}
+
+.skeleton-2 {
+  width: 160px;
+  height: 60px
+}
+
+
+@media (max-width: 768px) {
+  .credit-container {
+    .credit {
+      padding: 1.2rem 0 !important;
+    }
+  }
+
+
+  .credit-list {
+    padding: 0 !important;
+  }
+  h1 {
+    font-size: 30px !important;
+  }
+  .actorList {
+    padding: 0 !important;
+  }
+  .actors-carusel {
+    margin: 0 !important;
+    width: 100% !important;
+
+    img {
+      width: 100% !important;
+    }
+  }
+  .actor-overview {
+    margin: 0 !important;
+  }
+  .actorList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skeleton-1 {
+    margin-bottom: 1rem;
+  }
+  .actor-overview {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  .actors-carusel {
+    width: 400px;
+
+    img {
+      width: 400px;
+    }
+
+  }
+}
+
+@media (max-width: 1130px) {
+  .actor-overview {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .actor-overview {
+    width: 500px;
+  }
+}
+
+@media (max-width: 930px) {
+  .actor-overview {
+    width: 400px;
+  }
+}
+
+@media (max-width: 840px) {
+  .actor-overview {
+    width: 350px;
+  }
+}

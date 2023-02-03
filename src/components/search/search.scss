@@ -1,0 +1,132 @@
+@import "../movies/movies.scss";
+
+.search {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .search-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1350px;
+    margin: auto;
+    border-bottom: 1px solid #A71D31;
+    padding: 0 0.5rem;
+  }
+
+  form {
+    width: 90%;
+  }
+
+  input {
+    align-items: center;
+    padding: 1rem;
+    font-size: 18px;
+    border: none;
+    color: white;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.78);
+    outline: none;
+    width: 100%;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 38px;
+    border: none;
+    letter-spacing: 1px;
+    width: 100%;
+    max-width: 180px;
+    margin: auto;
+    margin-top: 1.5rem;
+  }
+
+  .search-movies {
+    @extend .movies;
+    padding: 1rem;
+
+    div {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+    .search-list-close {
+      display: none;
+    }
+
+
+    .search-list {
+      width: 100%;
+      margin-right: 15px;
+      padding-top: 1rem;
+      margin-bottom: 7px;
+      position: static !important;
+
+      h4{
+        margin-top: 0.7rem;
+      }
+      p{
+        font-weight: 600;
+        color: dimgrey;
+        margin-top: 0.5rem;
+      }
+      img {
+        width: 200px;
+      }
+
+      .vote {
+        span {
+          border-radius: 100%;
+          padding: 0.3rem;
+          font-weight: 600;
+        }
+
+        .bad-vote {
+          background-color: firebrick;
+
+        }
+
+        .medium-vote {
+          background-color: orange;
+        }
+
+        .good-vote {
+          background-color: forestgreen;
+        }
+
+      }
+
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 8px;
+
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: black;
+
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: dimgray;
+    border-radius: 200px;
+
+  }
+}
+

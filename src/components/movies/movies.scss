@@ -1,0 +1,258 @@
+
+.movies-container {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 1.2rem 0.8rem;
+  background-color: black;
+
+  ::-webkit-scrollbar {
+    height: 7px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: dimgray;
+    border-radius: 200px;
+  }
+}
+
+.movies-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  width: 100%;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    color: white;
+    position: relative;
+    padding: 0 !important;
+  }
+
+  .view-all {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px 25px;
+    border: none;
+    letter-spacing: 1px;
+  }
+}
+
+.chosen-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chosen-title2 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  background-color: white;
+  border-radius: 30px;
+
+  button {
+    padding: 0.3rem 0.8rem;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    color: black;
+  }
+
+  .movie-button-active {
+    background-color: #4cd964;
+    color: black;
+    &:focus {
+      background-color: #4cd964;
+    }
+  }
+
+  .tv-button-active {
+    color: black;
+    &:focus {
+      background-color: #4cd964;
+    }
+  }
+}
+
+.movie-title {
+  display: flex;
+  justify-content: space-between;
+  width: 211px;
+  height: 50px;
+  overflow-y: auto;
+
+  p {
+    font-weight: 600;
+    font-size: 15px;
+  }
+}
+
+.hide-movies {
+  display: none;
+}
+
+.hide-tv {
+  display: none;
+}
+
+h2 {
+  color: white;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: #A71D31;
+    height: 2px;
+    width: 60%;
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+  }
+}
+
+.movies {
+  display: flex;
+  overflow-x: scroll;
+  padding: 1rem 0;
+}
+
+.movies-list {
+  margin-right: 15px;
+  padding-top: 1.5rem;
+
+  &:hover {
+    color: white;
+    transform: scale(1.04);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .title-container {
+    height: 50px;
+    overflow-y: auto;
+
+    p {
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .vote {
+    position: relative;
+
+    span {
+      position: absolute;
+      border-radius: 100%;
+      color: white;
+      top: -10px;
+      right: -8px;
+      padding: 5px;
+      font-size: 13px;
+    }
+
+    .bad-vote {
+      background-color: firebrick;
+    }
+
+    .medium-vote {
+      background-color: orange;
+    }
+
+    .good-vote {
+      background-color: forestgreen;
+    }
+
+    img {
+      height: 320px;
+      border-radius: 15px;
+    }
+  }
+
+  p {
+    margin-top: 0.3rem;
+    color: gray;
+  }
+}
+
+.skeleton {
+  width: 200px;
+  height: 300px;
+  margin-right: 1rem;
+  margin-bottom: 13px;
+
+}
+
+.skeleton2 {
+  width: 200px;
+  height: 15px;
+  margin-bottom: 7px;
+}
+
+.skeleton3 {
+  width: 120px;
+  height: 15px;
+}
+
+
+@media (max-width: 768px) {
+
+  .movies-container {
+    overflow: hidden !important;
+    img {
+      height: 305px ;
+      border-radius: 20px !important;
+    }
+    .movie-title{
+      h4{
+        font-size: 15px !important;
+      }
+      p{
+        font-size: 14px !important;
+      }
+    }
+  }
+  .chosen-title {
+    width: 190px !important;
+    button{
+      padding: 0.3rem 0.4rem !important;
+      font-size: 15px!important;
+      color: black;
+    }
+  }
+  .movies-title {
+    h2{
+      font-size: 21px;
+    }
+    .view-all {
+      padding: 0.3rem 0.5rem !important;
+      font-size: 15px!important;
+      background-color: #8B0000;
+      color: white;
+    }
+  }
+  .movies {
+    padding: 0.5rem 0 !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+}

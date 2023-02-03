@@ -1,0 +1,124 @@
+@import "../movies/movies.scss";
+
+.allmovies {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding:2rem 0.8rem;
+}
+
+.category {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1500px;
+
+
+  select {
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    background-color: crimson;
+    padding: 0.1rem 0.5rem;
+
+    option {
+      background-color: #0c0c0c;
+      font-weight: 600;
+      font-size: 15px;
+    }
+  }
+}
+
+.allmovies-slider {
+  width: 100%;
+}
+
+.allmovies-container {
+  @extend .movies;
+  flex-wrap: wrap;
+  overflow-x: hidden !important;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.allmovies-list {
+  @extend .movies-list;
+  margin-right: unset !important;
+  padding-top: unset !important;
+  margin: 0 1rem;
+
+  img {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: unset !important;
+    min-width: unset !important;
+  }
+}
+
+.allmovies-title {
+  width: 100%;
+  max-width: 300px;
+  overflow-y: auto;
+}
+
+.pagination {
+  background-color: white;
+  border-radius: 20px;
+  margin: 1rem;
+}
+
+.allMovie-progress {
+  width: 45px;
+  height: 45px;
+  font-weight: 600;
+}
+
+.skeleton-list2 {
+  width: 100%;
+  max-width: 700px;
+}
+
+.allmovies-skeleton {
+  height: 40px;
+  border-radius: 20px;
+}
+
+@media (max-width: 560px) {
+  .allmovies{
+    padding:  0.8rem!important;
+  }
+  .category {
+    padding: 0.5rem 0!important;
+    h1 {
+      font-size: 22px !important;
+    }
+  }
+
+  .allmovies-container {
+    align-items: center;
+  }
+
+  .allmovies-list {
+    margin-right: unset !important;
+    margin: 0.5rem 0 !important;
+    padding-top: unset !important;
+
+    img {
+      width: 100% !important;
+      max-width: 367px !important;
+    }
+  }
+
+  .pagination {
+    margin: 0 0 1.5rem 0 !important;
+  }
+}
+

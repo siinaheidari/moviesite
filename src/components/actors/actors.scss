@@ -1,0 +1,95 @@
+.actors {
+  background-color: black;
+  padding: 0.8rem;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    position: relative;
+    padding: 0.5rem 0;
+
+    &::after {
+      content: "";
+      background: #A71D31;
+      height: 2px;
+      width: 100%;
+      position: absolute;
+      bottom: -9px;
+      left: 0;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: dimgray;
+    border-radius: 200px;
+  }
+
+}
+
+.actors-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 1330px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.actors-list {
+  padding: 1.5rem 0;
+  align-items: center;
+  text-align: center;
+  margin-right: 1rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.25s ease-in-out;
+  }
+
+  img {
+    max-width: 140px;
+    border-radius: 15px;
+  }
+
+}
+
+.actor-name {
+  height: 20px;
+  overflow-y: auto;
+}
+
+p {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.actor-skeleton {
+  width: 100%;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .actors-list {
+    img {
+      max-width: 120px !important;
+    }
+  }
+}
